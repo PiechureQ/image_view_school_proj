@@ -1,0 +1,6 @@
+/home/xmichalx/Projects/image_view/image_view/bin/Debug/image_view.exe
+/home/xmichalx/Projects/image_view/image_view/bin/Debug/image_view.pdb
+/home/xmichalx/Projects/image_view/image_view/obj/x86/Debug/image_view.csprojAssemblyReference.cache
+/home/xmichalx/Projects/image_view/image_view/obj/x86/Debug/image_view.csproj.CoreCompileInputs.cache
+/home/xmichalx/Projects/image_view/image_view/obj/x86/Debug/image_view.exe
+/home/xmichalx/Projects/image_view/image_view/obj/x86/Debug/image_view.pdb
