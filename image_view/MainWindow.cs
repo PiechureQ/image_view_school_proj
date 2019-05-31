@@ -43,8 +43,28 @@ public partial class MainWindow : Gtk.Window
     protected void onFileSelected(object sender, EventArgs e)
     {
         // get all in folder
-        picturesPool.SetPool(this.FileChooserWidget.Filename);
+        string filename = this.FileChooserWidget.Filename;
+        string ext = "";
+        if (String.IsNullOrWhiteSpace(filename) == false)
+            ext = filename.Substring(Math.Max(0, filename.Length - 3));
+        if (ext == "png" || ext == "jpg")
+        {
+            if (picturesPool.SetPool(this.FileChooserWidget.Filename) > -1)
+            { 
+                this.ImageView.File = picturesPool.GetCurrent();
+            }
+        }
+    }
 
-        this.ImageView.File = this.FileChooserWidget.Filename;
+    protected void OnNextClick(object sender, EventArgs e)
+    {
+        Console.WriteLine("next");
+        this.ImageView.File = picturesPool.GetNext();
+    }
+
+    protected void OnPrevClick(object sender, EventArgs e)
+    {
+        Console.WriteLine("prev");
+        this.ImageView.File = picturesPool.GetPrev();
     }
 }

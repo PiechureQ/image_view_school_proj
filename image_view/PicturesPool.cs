@@ -6,32 +6,46 @@ namespace image_view
     public class PicturesPool
     {
         private List<string> pool = new List<string>();
-        private Int16 index;
+        private int index = 0;
 
         public PicturesPool()
         {
 
         }
 
-        public bool SetPool(String name)
+        public int SetPool(String name)
         {
-            if (String.IsNullOrWhiteSpace(name) == false)
+            if ((pool != null) && (String.IsNullOrWhiteSpace(name) == false))
             {
                 pool.Add(name);
+                index = pool.Count - 1;
+                Console.WriteLine("select");
+                return index;
             }
-            return false;
+            return -1;
+        }
+
+
+        public String GetCurrent()
+        {
+            if (pool.Count > 0)
+                return pool[index];
+            else
+                return "";
         }
 
         public String GetNext()
         {
-            Console.WriteLine("x");
-            return "";
+            if (index < pool.Count - 1)
+                index += 1;
+            return GetCurrent();
         }
 
         public String GetPrev()
         {
-            Console.WriteLine("x");
-            return "";
+            if (index > 0)
+                index -= 1;
+            return GetCurrent();
         }
     }
 }

@@ -101,5 +101,7 @@ public partial class MainWindow
 		this.DeleteEvent += new global::Gtk.DeleteEventHandler(this.OnDeleteEvent);
 		this.FileChooserWidget.CurrentFolderChanged += new global::System.EventHandler(this.onFolderChanged);
 		this.FileChooserWidget.SelectionChanged += new global::System.EventHandler(this.onFileSelected);
+		this.PrevBtn.Clicked += new global::System.EventHandler(this.OnPrevClick);
+		this.NextBtn.Clicked += new global::System.EventHandler(this.OnNextClick);
 	}
 }

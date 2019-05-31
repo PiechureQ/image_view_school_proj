@@ -65,6 +65,7 @@
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Prev</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnPrevClick" />
               </widget>
               <packing>
                 <property name="Expand">False</property>
@@ -78,6 +79,7 @@
                 <property name="Type">TextOnly</property>
                 <property name="Label" translatable="yes">Next</property>
                 <property name="UseUnderline">True</property>
+                <signal name="Clicked" handler="OnNextClick" />
               </widget>
               <packing>
                 <property name="Position">1</property>
